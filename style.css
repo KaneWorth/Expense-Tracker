@@ -1,0 +1,240 @@
+/* #731127 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  width: auto;
+  color: #fff;
+  gap: 20px;
+  /* Gradient */
+  background-image: linear-gradient(
+    to left bottom,
+    #250707,
+    #280a0a,
+    #2b0d0c,
+    #2f0e0e,
+    #331010,
+    #3a1011,
+    #401111,
+    #471111,
+    #520f10,
+    #5d0d0e,
+    #680a0a,
+    #730606
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Title */
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Box Hovers */
+.container:hover,
+.items:hover,
+.total-container:hover {
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Input */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  text-align: center;
+  /* Background */
+  width: 400px;
+  margin: auto;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* Name */
+.product {
+  height: 40px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+/* price */
+.cost {
+  height: 40px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+/* Add Item Button */
+.addNewItem {
+  height: 40px;
+  width: 100px;
+  font-size: 18px;
+  color: #fff;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.addNewItem:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px rgba(255, 255, 255, 1);
+}
+
+/* Items */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  font-size: 16px;
+  /* Background */
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  margin: auto;
+}
+.item-container:hover {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* Price and remove button */
+.price-and-remove-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.remove {
+  text-indent: -9999px;
+  width: 70px;
+  padding: 5px;
+  color: #fff;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  /* background-color: rgba(255, 255, 255, 0.05); */
+  background-color: #731127;
+  content: "remove";
+}
+.remove:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px rgba(255, 255, 255, 1);
+}
+
+/* Total */
+.total-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  text-align: center;
+  /* Background */
+  width: 400px;
+  margin: auto;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.total-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.total {
+  font-size: 24px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Small Screen */
+@media only screen and (max-width: 600px) {
+  /* Title */
+  .title {
+    font-size: 26px;
+  }
+  .product,
+  .cost,
+  .addNewItem {
+    font-size: 16px;
+    width: 200px;
+  }
+  /* Boxes */
+  .container,
+  .items,
+  .total-container {
+    width: 250px;
+  }
+  /* Items Container */
+  .item-container {
+    width: 200px;
+  }
+  /* Add Item Button */
+  .addNewItem,
+  .cost {
+    height: 40px;
+    width: 200px;
+  }
+  .total-container h2 {
+    font-size: 28px;
+  }
+  .total {
+    font-size: 28px;
+  }
+  /* Remove Button */
+  .remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    border: none;
+    border-radius: 5px;
+  }
+  .remove::before {
+    text-indent: 0;
+    content: "\2716"; /* Unicode character for the cross symbol */
+    height: 22px !important;
+    width: 20px !important;
+    font-size: 16px;
+  }
+}
+@media (min-width: 601px) {
+  .remove {
+    content: "remove";
+    text-indent: 0;
+  }
+}
