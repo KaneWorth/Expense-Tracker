@@ -11,6 +11,6 @@ JavaScript
 Known Issues:
 The expense tracker does not currently support multiple currencies.
 
-This app is also a sister app to my budget calculator which can be found here.
+This app is also a sister app to my budget calculator which can be found here. https://kaneworth.github.io/Budget-Calculator/
 
 ![expense tracker](https://user-images.githubusercontent.com/115714856/210533582-d5cf846f-c932-4313-a3d7-5276a1642818.png)
